@@ -1,0 +1,24 @@
+@charset "UTF-8";
+
+* 
+{
+    margin: 0;
+    padding: 0;
+}
+
+.link-custom:hover
+{
+    margin-bottom: 10px;
+    transition: 0.2s;
+    transition-timing-function: ease-in-out;
+}
+
+.div-header
+{
+    font-size: 1.2rem !important;
+}
+
+.content-top-main
+{
+    padding-top: 8rem !important;
+}
