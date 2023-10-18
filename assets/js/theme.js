@@ -4,7 +4,7 @@ var _excluded = ["endValue"];
 
 function _typeof(obj) { "@babel/helpers - typeof"; if (typeof Symbol === "function" && typeof Symbol.iterator === "symbol") { _typeof = function _typeof(obj) { return typeof obj; }; } else { _typeof = function _typeof(obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }; } return _typeof(obj); }
 
-function _createForOfIteratorHelper(o, allowArrayLike) { var it = typeof Symbol !== "undefined" && o[Symbol.iterator] || o["@@iterator"]; if (!it) { if (Array.isArray(o) || (it = _unsupportedIterableToArray(o)) || allowArrayLike && o && typeof o.length === "number") { if (it) o = it; var i = 0; var F = function F() {}; return { s: F, n: function n() { if (i >= o.length) return { done: true }; return { done: false, value: o[i++] }; }, e: function e(_e) { throw _e; }, f: F }; } throw new TypeError("Invalid attempt to iterate non-iterable instance.\nIn order to be iterable, non-array objects must have a [Symbol.iterator]() method."); } var normalCompletion = true, didErr = false, err; return { s: function s() { it = it.call(o); }, n: function n() { var step = it.next(); normalCompletion = step.done; return step; }, e: function e(_e2) { didErr = true; err = _e2; }, f: function f() { try { if (!normalCompletion && it["return"] != null) it["return"](); } finally { if (didErr) throw err; } } }; }
+function _createForOfIteratorHelper(o, allowArrayLike) { var it = typeof Symbol !== "undefined" && o[Symbol.iterator] || o["@@iterator"]; if (!it) { if (Array.isArray(o) || (it = _unsupportedIterableToArray(o)) || allowArrayLike && o && typeof o.length === "number") { if (it) o = it; var i = 0; var F = function F() { }; return { s: F, n: function n() { if (i >= o.length) return { done: true }; return { done: false, value: o[i++] }; }, e: function e(_e) { throw _e; }, f: F }; } throw new TypeError("Invalid attempt to iterate non-iterable instance.\nIn order to be iterable, non-array objects must have a [Symbol.iterator]() method."); } var normalCompletion = true, didErr = false, err; return { s: function s() { it = it.call(o); }, n: function n() { var step = it.next(); normalCompletion = step.done; return step; }, e: function e(_e2) { didErr = true; err = _e2; }, f: function f() { try { if (!normalCompletion && it["return"] != null) it["return"](); } finally { if (didErr) throw err; } } }; }
 
 function _objectWithoutProperties(source, excluded) { if (source == null) return {}; var target = _objectWithoutPropertiesLoose(source, excluded); var key, i; if (Object.getOwnPropertySymbols) { var sourceSymbolKeys = Object.getOwnPropertySymbols(source); for (i = 0; i < sourceSymbolKeys.length; i++) { key = sourceSymbolKeys[i]; if (excluded.indexOf(key) >= 0) continue; if (!Object.prototype.propertyIsEnumerable.call(source, key)) continue; target[key] = source[key]; } } return target; }
 
@@ -322,7 +322,7 @@ var utils = {
 
 var detectorInit = function detectorInit() {
   var _window = window,
-      is = _window.is;
+    is = _window.is;
   var html = document.querySelector('html');
   is.opera() && addClass(html, 'opera');
   is.mobile() && addClass(html, 'mobile');
@@ -463,9 +463,9 @@ var BulkSelect = /*#__PURE__*/function () {
     key: "attachNodes",
     value: function attachNodes() {
       var _this$element$data = this.element.data('bulk-select'),
-          body = _this$element$data.body,
-          actions = _this$element$data.actions,
-          replacedElement = _this$element$data.replacedElement;
+        body = _this$element$data.body,
+        actions = _this$element$data.actions,
+        replacedElement = _this$element$data.replacedElement;
 
       this.actions = new DomNode(document.getElementById(actions));
       this.replacedElement = new DomNode(document.getElementById(replacedElement));
@@ -735,8 +735,8 @@ var cookieNoticeInit = function cookieNoticeInit() {
     }, utils.getData(item, DataKeys.OPTIONS));
 
     var showOnce = options.showOnce,
-        autoShow = options.autoShow,
-        autoShowDelay = options.autoShowDelay;
+      autoShow = options.autoShow,
+      autoShowDelay = options.autoShowDelay;
 
     if (showOnce) {
       var hasNotice = utils.getCookie('notice');
@@ -819,8 +819,8 @@ var countupInit = function countupInit() {
     var countups = document.querySelectorAll('[data-countup]');
     countups.forEach(function (node) {
       var _utils$getData = utils.getData(node, 'countup'),
-          endValue = _utils$getData.endValue,
-          options = _objectWithoutProperties(_utils$getData, _excluded);
+        endValue = _utils$getData.endValue,
+        options = _objectWithoutProperties(_utils$getData, _excluded);
 
       var countUp = new window.countUp.CountUp(node, endValue, _objectSpread({
         duration: 5
@@ -1033,7 +1033,7 @@ var dropzoneInit = function dropzoneInit() {
           }
 
           var _iterator = _createForOfIteratorHelper(file.previewElement.querySelectorAll('[data-dz-errormessage]')),
-              _step;
+            _step;
 
           try {
             for (_iterator.s(); !(_step = _iterator.n()).done;) {
@@ -2119,8 +2119,8 @@ function initMap() {
       });
       themeController && themeController.addEventListener('clickControl', function (_ref3) {
         var _ref3$detail = _ref3.detail,
-            control = _ref3$detail.control,
-            value = _ref3$detail.value;
+          control = _ref3$detail.control,
+          value = _ref3$detail.value;
 
         if (control === 'theme') {
           map.set('styles', value === 'dark' ? mapStyles.Cobalt : mapStyles[mapStyle]);
@@ -3218,7 +3218,7 @@ var leafletActiveUserInit = function leafletActiveUserInit() {
     name: '299'
   }];
   var _window2 = window,
-      L = _window2.L;
+    L = _window2.L;
   var mapContainer = document.getElementById('map');
 
   if (L && mapContainer) {
@@ -3247,8 +3247,8 @@ var leafletActiveUserInit = function leafletActiveUserInit() {
     });
     points.map(function (point) {
       var name = point.name,
-          location = point.location,
-          street = point.street;
+        location = point.location,
+        street = point.street;
       var icon = L.icon({
         iconUrl: "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABkAAAApCAYAAADAk4LOAAAACXBIWXMAAAFgAAABYAEg2RPaAAADpElEQVRYCZ1XS1LbQBBtybIdiMEJKSpUqihgEW/xDdARyAnirOIl3MBH8NK7mBvkBpFv4Gy9IRSpFIQiRPyNfqkeZkY9HwmFt7Lm06+7p/vN2MmyDIrQ6QebALAHAD4AbFuWfQeAAACGs5H/w5jlsJJw4wMA+GhMFuMA99jIDJJOP+ihZwDQFmNuowWO1wS3viDXpdEdZPEc0odruj0EgN5s5H8tJOEEX8R3rbkMtcU34NTqhe5nSQTJ7Tkk80s6/Gk28scGiULguFBffgdufdEwWoQ0uoXo8hdAlooVH0REjISfwZSlyHGh0V5n6aHAtKTxXI5g6nQnMH0P4bEgwtR18Yw8Pj8QZ4ARUAI0Hl+fQZZGisGEBVwHr7XKzox57DXZ/ij8Cdwe2u057z9/wygOxRl4S2vSUHx1oucaMQGAHTrgtdag9mK5aN+Wx/uAAQ9Zenp/SRce4TpaNbQK4+sTcGqeTB/aIXv3XN5oj2VKqii++U0JunpZ8urxee4hvjqVc2hHpBDXuKKT9XMgVYJ1/1fPGSeaikzgmWWkMIi9bVf8UhotXxzORn5gWFchI8QyttlzjS0qpsaIGY2MMsujV/AUSdcY0dDpB6/EiOPYzclR1CI5mOez3ekHvrFLxa7cR5pTscfrXjk0Vhm5V2PqLUWnH3R5GbPGpMVD7E1ckXesKBQ7AS/vmQ1c0+kHuxpBj98lTCm8pbc5QRJRdZ6qHb/wGryXq3Lxszv+5gySuwvxueXySwYvHEjuQ9ofTGKYlrmK1EsCHMd5SoD7mZ1HHFCBHLNbMEshvrugqWLn01hpVVJhFgVGkDvK7hR6n2B+d9C7xsqWsbkqHv4cCsWezEb+o2SR+SFweUBxfA5wH7kShjKt2vWL57Px3GhIFEezkb8pxvUWHYhotAfCk2AtkEcxoOttrxUWDR5svb1emSQKj0WXK1HYIgFREbiBqmoZcB2RkbE+byMZiosorVgAZF1ID7yQhEs38wa7nUqNDezdlavC2HbBGSQkGgZ8uJVBmzeiKCRRpEa9ilWghORVeGB7BxeSKF5xqbFBkxBrFKUk/JHA7ppENQaCnCjthK+3opCEYyANztXmZN858cDYWSUSHk3A311GAZDvo6deNKUk1EsqnJoQlkYBNlmxQZeaMgmxoUokICoHDce351RCCiuKoirJWEgNOYvQplM2VCLhUqF7jf94rW9kHVUjQeheV4riv0i4ZOzzz/2y/+0KAOAfr4EE4HpCFhwAAAAASUVORK5CYII=\n        "
       });
@@ -3270,8 +3270,8 @@ var leafletActiveUserInit = function leafletActiveUserInit() {
     var themeController = document.body;
     themeController.addEventListener('clickControl', function (_ref9) {
       var _ref9$detail = _ref9.detail,
-          control = _ref9$detail.control,
-          value = _ref9$detail.value;
+        control = _ref9$detail.control,
+        value = _ref9$detail.value;
 
       if (control === 'theme') {
         tiles.updateFilter(value === 'dark' ? ['invert:98%', 'grayscale:69%', 'bright:89%', 'contrast:111%', 'hue:205deg', 'saturate:1000%'] : ['bright:101%', 'contrast:101%', 'hue:23deg', 'saturate:225%']);
@@ -3556,8 +3556,8 @@ var navbarDarkenOnScroll = function navbarDarkenOnScroll() {
     var themeController = document.body;
     themeController.addEventListener('clickControl', function (_ref10) {
       var _ref10$detail = _ref10.detail,
-          control = _ref10$detail.control,
-          value = _ref10$detail.value;
+        control = _ref10$detail.control,
+        value = _ref10$detail.value;
 
       if (control === 'theme') {
         toggleThemeClass(value);
@@ -3575,7 +3575,7 @@ var navbarDarkenOnScroll = function navbarDarkenOnScroll() {
     var colorRgb = utils.hexToRgb(getBgClassName(name, defaultColorName).color);
 
     var _window$getComputedSt = window.getComputedStyle(navbar),
-        backgroundImage = _window$getComputedSt.backgroundImage;
+      backgroundImage = _window$getComputedSt.backgroundImage;
 
     var transition = 'background-color 0.35s ease';
     navbar.style.backgroundImage = 'none'; // Change navbar background color on scroll
@@ -4506,7 +4506,7 @@ var wizardInit = function wizardInit() {
 };
 
 var _window3 = window,
-    dayjs = _window3.dayjs;
+  dayjs = _window3.dayjs;
 var currentDay = dayjs && dayjs().format('DD');
 var currentMonth = dayjs && dayjs().format('MM');
 var prevMonth = dayjs && dayjs().subtract(1, 'month').format('MM');
@@ -4716,12 +4716,12 @@ var appCalendarInit = function appCalendarInit() {
     addEventForm && addEventForm.addEventListener(Events.SUBMIT, function (e) {
       e.preventDefault();
       var _e$target = e.target,
-          title = _e$target.title,
-          startDate = _e$target.startDate,
-          endDate = _e$target.endDate,
-          label = _e$target.label,
-          description = _e$target.description,
-          allDay = _e$target.allDay;
+        title = _e$target.title,
+        startDate = _e$target.startDate,
+        endDate = _e$target.endDate,
+        label = _e$target.label,
+        description = _e$target.description,
+        allDay = _e$target.allDay;
       calendar.addEvent({
         title: title.value,
         start: startDate.value,
@@ -6174,10 +6174,10 @@ var candleChartInit = function candleChartInit() {
     var $echartsZoomOut = document.getElementById($echartsCandleChart.dataset.actionTarget).querySelector(ECHART_ZOOM_OUT);
 
     var _utils$getColors = utils.getColors(),
-        warning = _utils$getColors.warning;
+      warning = _utils$getColors.warning;
 
     var _utils$getColors2 = utils.getColors(),
-        primary = _utils$getColors2.primary;
+      primary = _utils$getColors2.primary;
 
     var splitData = function splitData(rawData) {
       var categoryData = [];
@@ -6659,8 +6659,8 @@ var dealStorageFunnelInit = function dealStorageFunnelInit() {
   if ($echartDealStorageFunnel) {
     var userOptions = utils.getData($echartDealStorageFunnel, 'options');
     var data = userOptions.data,
-        dataAxis1 = userOptions.dataAxis1,
-        dataAxis2 = userOptions.dataAxis2;
+      dataAxis1 = userOptions.dataAxis1,
+      dataAxis2 = userOptions.dataAxis2;
     var chart = window.echarts.init($echartDealStorageFunnel);
 
     var getDefaultOptions = function getDefaultOptions() {
@@ -9906,7 +9906,7 @@ var totalSalesEcommerce = function totalSalesEcommerce() {
   function getFormatter(params) {
     return params.map(function (_ref16, index) {
       var value = _ref16.value,
-          borderColor = _ref16.borderColor;
+        borderColor = _ref16.borderColor;
       return "<span class= \"fas fa-circle\" style=\"color: ".concat(borderColor, "\"></span>\n    <span class='text-600'>").concat(index === 0 ? 'Last Month' : 'Previous Year', ": ").concat(value, "</span>");
     }).join('<br/>');
   }
@@ -10085,8 +10085,8 @@ var totalSalesInit = function totalSalesInit() {
 
   function getFormatter(params) {
     var _params$ = params[0],
-        name = _params$.name,
-        value = _params$.value;
+      name = _params$.name,
+      value = _params$.value;
     var date = new Date(name);
     return "".concat(months[0], " ").concat(date.getDate(), ", ").concat(value);
   }
@@ -10225,8 +10225,8 @@ var totalSalesInit = function totalSalesInit() {
           tooltip: {
             formatter: function formatter(params) {
               var _params$2 = params[0],
-                  name = _params$2.name,
-                  value = _params$2.value;
+                name = _params$2.name,
+                value = _params$2.value;
               var date = new Date(name);
               return "".concat(months[month], " ").concat(date.getDate(), ", ").concat(value);
             }
@@ -10617,31 +10617,30 @@ var weeklySalesInit = function weeklySalesInit() {
   }
 };
 
-// Função para iniciar a contagem quando o elemento estiver visível
- var startCountUpWhenVisible = function startCountUpWhenVisible() {
-  const element = document.querySelector('[data-countup]');
-  
-  if (!element) return; // Verifica se o elemento existe
-  
-  const options = {
-    root: null, // O elemento raiz usado como viewport. Se null, usa a janela.
-    rootMargin: '0px', // Margem em relação ao viewport.
-    threshold: 0.5 // Quando pelo menos 50% do elemento estiver visível.
-  };
-  
-  const observer = new IntersectionObserver(entries => {
-    entries.forEach(entry => {
-      if (entry.isIntersecting) {
-        const countup = new CountUp(element, element.getAttribute('data-countup-endValue'));
-        countup.start();
-        observer.unobserve(element); // Para de observar após iniciar a contagem
-      }
-    });
-  }, options);
-  
-  observer.observe(element); // Começa a observar o elemento
-}
+var aos = function aos() {
+  AOS.init({
+    // Global settings:
+    disable: false, // accepts following values: 'phone', 'tablet', 'mobile', boolean, expression or function
+    startEvent: 'DOMContentLoaded', // name of the event dispatched on the document, that AOS should initialize on
+    initClassName: 'aos-init', // class applied after initialization
+    animatedClassName: 'aos-animate', // class applied on animation
+    useClassNames: false, // if true, will add content of `data-aos` as classes on scroll
+    disableMutationObserver: false, // disables automatic mutations' detections (advanced)
+    debounceDelay: 50, // the delay on debounce used while resizing window (advanced)
+    throttleDelay: 99, // the delay on throttle used while scrolling the page (advanced)
 
+
+    // Settings that can be overridden on per-element basis, by `data-aos-*` attributes:
+    offset: 120, // offset (in px) from the original trigger point
+    delay: 0, // values from 0 to 3000, with step 50ms
+    duration: 400, // values from 0 to 3000, with step 50ms
+    easing: 'ease', // default easing for AOS animations
+    once: false, // whether animation should happen only once - while scrolling down
+    mirror: false, // whether elements should animate out while scrolling past them
+    anchorPlacement: 'top-bottom', // defines which position of the element regarding to window should trigger the animation
+
+  });
+}
 /* -------------------------------------------------------------------------- */
 
 /*                            Theme Initialization                            */
@@ -10649,7 +10648,7 @@ var weeklySalesInit = function weeklySalesInit() {
 /* -------------------------------------------------------------------------- */
 
 
-docReady(startCountUpWhenVisible);
+docReady(aos);
 docReady(detectorInit);
 docReady(handleNavbarVerticalCollapsed);
 docReady(totalOrderInit);
