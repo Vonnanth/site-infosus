@@ -4393,9 +4393,12 @@ var typedTextInit = function typedTextInit() {
     typedTexts.forEach(function (typedText) {
       return new window.Typed(typedText, {
         strings: utils.getData(typedText, 'typedText'),
+        startDelay: 1000,
         typeSpeed: 100,
         loop: true,
-        backDelay: 1500
+        shuffle: true,
+        backSpeed: 100,
+        backDelay: 500
       });
     });
   }
