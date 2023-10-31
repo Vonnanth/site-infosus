@@ -1,2 +1,23 @@
 
 /*# sourceMappingURL=user.min.css.map */
+.custom-button 
+{
+    background-color: rgba(255, 255, 255, 0) !important;
+    color: black !important;
+}
+
+#overlay-blue.overlay::before {
+content: "" !important;
+position: absolute !important;
+top: 0 !important;
+left: 0 !important;
+width: 100% !important;
+height: 100% !important;
+background: rgba(61, 177, 231, 0.438) !important; /* Cor azul com uma opacidade de 0.5 */
+pointer-events: none !important; /* Evita que a sobreposição bloqueie a interação com o conteúdo subjacente */
+}
+
+#video-infosus
+{
+    box-shadow: 10px 10px 5px !important;
+}
