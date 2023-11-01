@@ -1,23 +1,51 @@
-
 /*# sourceMappingURL=user.min.css.map */
-.custom-button 
-{
+.custom-button {
     background-color: rgba(255, 255, 255, 0) !important;
     color: black !important;
 }
 
 #overlay-blue.overlay::before {
-content: "" !important;
-position: absolute !important;
-top: 0 !important;
-left: 0 !important;
-width: 100% !important;
-height: 100% !important;
-background: rgba(61, 177, 231, 0.438) !important; /* Cor azul com uma opacidade de 0.5 */
-pointer-events: none !important; /* Evita que a sobreposição bloqueie a interação com o conteúdo subjacente */
+    content: "" !important;
+    position: absolute !important;
+    top: 0 !important;
+    left: 0 !important;
+    width: 100% !important;
+    height: 100% !important;
+    background: rgba(61, 177, 231, 0.747) !important;
+    /* Cor azul com uma opacidade de 0.5 */
+    pointer-events: none !important;
+    /* Evita que a sobreposição bloqueie a interação com o conteúdo subjacente */
 }
 
-#video-infosus
+#video-infosus {
+    box-shadow: 10px 10px 15px rgba(0, 0, 0, 0.315) !important;
+}
+
+#par-2
 {
-    box-shadow: 10px 10px 5px !important;
+    height: 180px !important;
+}
+
+@media screen and (min-width:631px) {
+    #par-4 
+    {
+        height: 180px !important;
+    }
+}
+
+@media screen and (max-width:370px) {
+    #par-4 {
+        height: 600px !important;
+    }
+
+    #par-2
+    {
+        height: 350px !important;
+    }
+}
+
+@media screen and (max-width: 1200px) and (min-width:768px) {
+    #par-4 {
+        height: 500px !important;
+    }
 }
