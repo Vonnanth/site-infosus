@@ -17,32 +17,3 @@
     /* Evita que a sobreposição bloqueie a interação com o conteúdo subjacente */
 }
 
-#par-2 {
-    height: 230px;
-}
-
-#par-4 {
-    height: 180px;
-}
-
-@media screen and (max-width: 370px) {
-    #par-2 {
-        height: 350px; /* Ajuste a altura desejada para telas menores */
-    }
-
-    #par-4 {
-        height: 700px; /* Ajuste a altura desejada para telas menores */
-    }
-}
-
-@media screen and (min-width: 371px) and (max-width: 767px) {
-    #par-4 {
-        height: 320px; /* Ajuste a altura desejada para telas nesse intervalo */
-    }
-}
-
-@media screen and (min-width: 768px) and (max-width: 1200px) {
-    #par-4 {
-        height: 380px; /* Ajuste a altura desejada para telas nesse intervalo */
-    }
-}
