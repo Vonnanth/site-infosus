@@ -2,630 +2,715 @@
 <html lang="en-US" dir="ltr">
 
 <head>
-  <meta charset="utf-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
 
 
-  <!-- ===============================================-->
-  <!--    Document Title-->
-  <!-- ===============================================-->
-  <title>Infosus | Sistema de gestão</title>
+    <!-- ===============================================-->
+    <!--    Document Title-->
+    <!-- ===============================================-->
+    <title>Infosus | Sistema de gestão</title>
 
 
-  <!-- ===============================================-->
-  <!--    Favicons-->
-  <!-- ===============================================-->
-  <link rel="apple-touch-icon" sizes="180x180" href="assets/img/favicons/apple-touch-icon.png">
-  <link rel="icon" type="image/png" sizes="32x32" href="assets/img/favicons/favicon-32x32.png">
-  <link rel="icon" type="image/png" sizes="16x16" href="assets/img/favicons/favicon-16x16.png">
-  <link rel="shortcut icon" type="image/x-icon" href="assets/img/favicons/favicon.ico">
-  <link rel="manifest" href="assets/img/favicons/manifest.json">
-  <meta name="msapplication-TileImage" content="assets/img/favicons/mstile-150x150.png">
-  <meta name="theme-color" content="#ffffff">
-  <script src="assets/js/config.js"></script>
-  <script src="vendors/overlayscrollbars/OverlayScrollbars.min.js"></script>
+    <!-- ===============================================-->
+    <!--    Favicons-->
+    <!-- ===============================================-->
+    <link rel="apple-touch-icon" sizes="180x180" href="assets/img/favicons/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="assets/img/favicons/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="assets/img/favicons/favicon-16x16.png">
+    <link rel="shortcut icon" type="image/x-icon" href="assets/img/favicons/favicon.ico">
+    <link rel="manifest" href="assets/img/favicons/manifest.json">
+    <meta name="msapplication-TileImage" content="assets/img/favicons/mstile-150x150.png">
+    <meta name="theme-color" content="#ffffff">
+    <script src="assets/js/config.js"></script>
+    <script src="vendors/overlayscrollbars/OverlayScrollbars.min.js"></script>
 
 
-  <!-- ===============================================-->
-  <!--    Stylesheets-->
-  <!-- ===============================================-->
-  <link href="vendors/swiper/swiper-bundle.min.css" rel="stylesheet">
-  <link rel="preconnect" href="https://fonts.gstatic.com">
-  <link
-    href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,500,600,700%7cPoppins:300,400,500,600,700,800,900&amp;display=swap"
-    rel="stylesheet">
-  <link href="vendors/overlayscrollbars/OverlayScrollbars.min.css" rel="stylesheet">
-  <link href="assets/css/theme-rtl.min.css" rel="stylesheet" id="style-rtl">
-  <link href="assets/css/theme.min.css" rel="stylesheet" id="style-default">
-  <link href="assets/css/user-rtl.min.css" rel="stylesheet" id="user-style-rtl">
-  <link href="assets/css/user.min.css" rel="stylesheet" id="user-style-default">
-  <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
-  <style>
-    [data-aos="new-animation"] {
-      opacity: 0;
-      transition-property: transform, opacity;
+    <!-- ===============================================-->
+    <!--    Stylesheets-->
+    <!-- ===============================================-->
+    <link href="vendors/swiper/swiper-bundle.min.css" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link
+        href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,500,600,700%7cPoppins:300,400,500,600,700,800,900&amp;display=swap"
+        rel="stylesheet">
+    <link href="vendors/overlayscrollbars/OverlayScrollbars.min.css" rel="stylesheet">
+    <link href="assets/css/theme-rtl.min.css" rel="stylesheet" id="style-rtl">
+    <link href="assets/css/theme.min.css" rel="stylesheet" id="style-default">
+    <link href="assets/css/user-rtl.min.css" rel="stylesheet" id="user-style-rtl">
+    <link href="assets/css/user.min.css" rel="stylesheet" id="user-style-default">
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+    <style>
+        [data-aos="new-animation"] {
+            opacity: 0;
+            transition-property: transform, opacity;
 
-      &.aos-animate {
-        opacity: 1;
-      }
+            &.aos-animate {
+                opacity: 1;
+            }
 
-      @media screen and (min-width: 1368px) {
-        transform: translateX(100px);
+            @media screen and (min-width: 1368px) {
+                transform: translateX(100px);
 
-        &.aos-animate {
-          transform: translateX(0);
+                &.aos-animate {
+                    transform: translateX(0);
+                }
+            }
         }
-      }
-    }
 
-    [data-aos] {
+        [data-aos] {
 
-      body[data-aos-easing="new-easing"] &,
-      &[data-aos][data-aos-easing="new-easing"] {
-        transition-timing-function: cubic-bezier(.250, .250, .750, .750);
-      }
-    }
-  </style>
-  <script>
-    var isRTL = JSON.parse(localStorage.getItem('isRTL'));
-    if (isRTL) {
-      var linkDefault = document.getElementById('style-default');
-      var userLinkDefault = document.getElementById('user-style-default');
-      linkDefault.setAttribute('disabled', true);
-      userLinkDefault.setAttribute('disabled', true);
-      document.querySelector('html').setAttribute('dir', 'rtl');
-    } else {
-      var linkRTL = document.getElementById('style-rtl');
-      var userLinkRTL = document.getElementById('user-style-rtl');
-      linkRTL.setAttribute('disabled', true);
-      userLinkRTL.setAttribute('disabled', true);
-    }
-  </script>
+            body[data-aos-easing="new-easing"] &,
+            &[data-aos][data-aos-easing="new-easing"] {
+                transition-timing-function: cubic-bezier(.250, .250, .750, .750);
+            }
+        }
+    </style>
+    <script>
+        var isRTL = JSON.parse(localStorage.getItem('isRTL'));
+        if (isRTL) {
+            var linkDefault = document.getElementById('style-default');
+            var userLinkDefault = document.getElementById('user-style-default');
+            linkDefault.setAttribute('disabled', true);
+            userLinkDefault.setAttribute('disabled', true);
+            document.querySelector('html').setAttribute('dir', 'rtl');
+        } else {
+            var linkRTL = document.getElementById('style-rtl');
+            var userLinkRTL = document.getElementById('user-style-rtl');
+            linkRTL.setAttribute('disabled', true);
+            userLinkRTL.setAttribute('disabled', true);
+        }
+    </script>
 </head>
 
 
 <body>
 
-  <!-- ===============================================-->
-  <!--    Main Content-->
-  <!-- ===============================================-->
-  <main class="main" id="top">
-    <nav class="navbar navbar-standard navbar-expand-lg fixed-top navbar-glass navbar-light">
-      <div class="container">
-        <a class="navbar-brand" href="index.html">
-          <img src="assets/img/logos/infosus-logo.png" alt="logo-infosus" style="width: 100px;">
-        </a>
-        <button class="navbar-toggler collapsed" type="button" data-bs-toggle="collapse"
-          data-bs-target="#navbarStandard" aria-controls="navbarStandard" aria-expanded="false"
-          aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
-        <div class="collapse navbar-collapse scrollbar" id="navbarStandard">
-          <ul class="navbar-nav ms-auto">
-            <li class="nav-item">
-              <a class="nav-link" href="https://infosus.net.br/resultados" role="button"><i class="fas fa-poll-h"></i>
-                Resultados</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="https://app.infosus.com.br/" target="_blank" role="button"><i
-                  class="fas fa-user"></i> Login</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link"
-                href="https://api.whatsapp.com/send?phone=38991251037&text=Ol%C3%A1%21%20Gostaria%20de%20saber%20mais%20sobre%20a%20INFOSUS%21"
-                target="_blank" role="button"><i class="fas fa-comment"></i> Contato</a>
-            </li>
-          </ul>
-        </div>
-      </div>
-    </nav>
-
-    <!-- ============================================-->
-    <!-- <section> begin ============================-->
-    <section class="py-0 overflow-hidden light" id="banner">
-
-      <div class="bg-holder overlay"
-        style="background-image:url(assets/img/infosus/banner-infosusV2.jpg);background-position: top;transform: scaleX(-1);">
-      </div>
-      <!--/.bg-holder-->
-
-      <div class="container">
-        <div class="row flex-center align-items-center pt-8 pt-lg-10 pb-lg-9 pb-xl-0" data-aos="fade-left">
-          <div
-            class="col-md-11 col-lg-8 col-xl-4 pb-7 pb-xl-5 text-center text-xl-start d-flex flex-column justify-content-center align-items-center">
-            <h1 class="text-white fw-light">O melhor sistema de <br><span class="typed-text fw-bold bg-primary"
-                data-typed-text='["hospedagem","capacitação","monitoramento","suporte"]'></span><br />para o seu
-              munícipio</h1>
-            <p class="lead text-white fs--1 opacity-75">Informações obtidas de produção durante a compentência estarão
-              visíveis de forma intuitiva no nosso painel. Atendemos aos critérios estabelecidos pelo programa
-              INFORMATIZA-APS do ministério da Saúde.</p>
-            <a class="btn btn-outline-light border-2 rounded-pill btn-lg mt-4 fs-0 py-2"
-              href="https://api.whatsapp.com/send?phone=38991251037&text=Ol%C3%A1%21%20Gostaria%20de%20saber%20mais%20sobre%20a%20INFOSUS%21"
-              target="_blank">Comece com a
-              INFOSUS<span class="fas fa-play ms-2" data-fa-transform="shrink-6 down-1"></span></a>
-          </div>
-          <div class="col-xl-7 offset-xl-1 align-self-center mt-xl-0 d-flex">
-            <video controls autoplay muted loop class="w-100 p-2 mb-5 bg-primary rounded align-self-center"
-              id="video-infosus">
-              <source src="assets/video/SnapInsta.io-Sistema de Monitoramento - InfoSUS-(480p).mp4" type="video/mp4">
-            </video>
-          </div>
-        </div>
-      </div>
-      <!-- end of .container-->
-
-    </section>
-    <!-- <section> close ============================-->
-    <!-- ============================================-->
-
-
-
-
-    <!-- ============================================-->
-    <!-- <section> begin ============================-->
-    <section class="py-3 bg-light shadow-sm  rounded-end-circle" data-aos="zoom-in">
-
-      <div class="container">
-        <div class="text-center mb-3">
-          <h4>Alguns clientes INFOSUS</h4>
-        </div>
-        <div class="row">
-          <div class="col-lg-12 mb-4 mb-lg-0">
-            <div class="swiper-container theme-slider text-center w-100"
-              data-swiper='{"autoplay": {"delay": 300},"spaceBetween":3,"loop":true,"loopedSlides":5,"slideToClickedSlide":true, "slidesPerView": 5, "speed": 1500, "easing": "swing"}'>
-              <div class="swiper-wrapper">
-                <div class="swiper-slide"><img class="rounded-1 img-fluid"
-                    src="assets/img/infosus/logomarcas/botumirim.png" alt="" style="height: 50px;" /></div>
-                <div class="swiper-slide"><img class="rounded-1 img-fluid"
-                    src="assets/img/infosus/logomarcas/catuti.png" alt="" style="height: 50px;" /></div>
-                <div class="swiper-slide"><img class="rounded-1 img-fluid"
-                    src="assets/img/infosus/logomarcas/cristalia.png" alt="" style="height: 50px;" /></div>
-                <div class="swiper-slide"><img class="rounded-1 img-fluid"
-                    src="assets/img/infosus/logomarcas/cupira.png" alt="" style="height: 50px;" /></div>
-                <div class="swiper-slide"><img class="rounded-1 img-fluid"
-                    src="assets/img/infosus/logomarcas/divisaalegre.png" alt="" style="height: 50px;" /></div>
-                <div class="swiper-slide"><img class="rounded-1 img-fluid"
-                    src="assets/img/infosus/logomarcas/frutadeleite.png" alt="" style="height: 50px;" /></div>
-                <div class="swiper-slide"><img class="rounded-1 img-fluid"
-                    src="assets/img/infosus/logomarcas/gameleiras.png" alt="" style="height: 50px;" /></div>
-                <div class="swiper-slide"><img class="rounded-1 img-fluid"
-                    src="assets/img/infosus/logomarcas/graomogol.png" alt="" style="height: 50px;" /></div>
-                <div class="swiper-slide"><img class="rounded-1 img-fluid"
-                    src="assets/img/infosus/logomarcas/janauba.png" alt="" style="height: 50px;" /></div>
-                <div class="swiper-slide"><img class="rounded-1 img-fluid"
-                    src="assets/img/infosus/logomarcas/juvenilia.png" alt="" style="height: 50px;" /></div>
-                <div class="swiper-slide"><img class="rounded-1 img-fluid"
-                    src="assets/img/infosus/logomarcas/mamonas.png" alt="" style="height: 50px;" /></div>
-                <div class="swiper-slide"><img class="rounded-1 img-fluid"
-                    src="assets/img/infosus/logomarcas/matias.png" alt="" style="height: 50px;" /></div>
-                <div class="swiper-slide"><img class="rounded-1 img-fluid"
-                    src="assets/img/infosus/logomarcas/matoverde.png" alt="" style="height: 50px;" /></div>
-                <div class="swiper-slide"><img class="rounded-1 img-fluid" src="assets/img/infosus/logomarcas/mazul.png"
-                    alt="" style="height: 50px;" /></div>
-                <div class="swiper-slide"><img class="rounded-1 img-fluid"
-                    src="assets/img/infosus/logomarcas/miravania.png" alt="" style="height: 50px;" /></div>
-                <div class="swiper-slide"><img class="rounded-1 img-fluid"
-                    src="assets/img/infosus/logomarcas/montalvania.png" alt="" style="height: 50px;" /></div>
-                <div class="swiper-slide"><img class="rounded-1 img-fluid"
-                    src="assets/img/infosus/logomarcas/montezuma.png" alt="" style="height: 50px;" /></div>
-                <div class="swiper-slide"><img class="rounded-1 img-fluid"
-                    src="assets/img/infosus/logomarcas/pimenta.png" alt="" style="height: 50px;" /></div>
-                <div class="swiper-slide"><img class="rounded-1 img-fluid"
-                    src="assets/img/infosus/logomarcas/porteirinha.png" alt="" style="height: 50px;" /></div>
-                <div class="swiper-slide"><img class="rounded-1 img-fluid"
-                    src="assets/img/infosus/logomarcas/saojoaoparaiso.png" alt="" style="height: 50px;" /></div>
-                <div class="swiper-slide"><img class="rounded-1 img-fluid"
-                    src="assets/img/infosus/logomarcas/rsz_bandeirasaojoaodasmissoes-nobg.png" alt=""
-                    style="height: 50px;" /></div>
-                <div class="swiper-slide"><img class="rounded-1 img-fluid"
-                    src="assets/img/infosus/logomarcas/sjparaiso.svg" alt="" style="height: 50px;" /></div>
-                <div class="swiper-slide"><img class="rounded-1 img-fluid" src="assets/img/infosus/logomarcas/ubai.png"
-                    alt="" style="height: 50px;" /></div>
-                <div class="swiper-slide"><img class="rounded-1 img-fluid" src="assets/img/infosus/verdelandia.png"
-                    alt="" style="height: 50px;" /></div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-      <!-- end of .container-->
-
-    </section>
-    <!-- <section> close ============================-->
-    <!-- ============================================-->
-
-
-
-
-    <!-- ============================================-->
-    <!-- <section> begin ============================-->
-    <section class="pt-0">
-
-      <div class="row p-0 m-0 text-dark" data-aos="fade-up" data-aos-duration="1100">
-        <div class="p-0 m-0 col-12">
-          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320" style="margin-bottom: -5px;">
-            <path fill="#0099ff" fill-opacity="1"
-              d="M0,192L80,202.7C160,213,320,235,480,218.7C640,203,800,149,960,154.7C1120,160,1280,224,1360,256L1440,288L1440,320L1360,320C1280,320,1120,320,960,320C800,320,640,320,480,320C320,320,160,320,80,320L0,320Z">
-            </path>
-          </svg>
-        </div>
-        <div
-          class="p-3 col-12 col-md-6 col-lg-6 ps-lg-6 text-center text-white d-flex flex-column justify-content-center align-items-center"
-          style="background-color: #0099FF;">
-          <h1 class="fs-2 fs-sm-4 fs-md-5">O futuro é a INFOSUS!</h1>
-          <div id="carouselExampleIndicators" class="carousel slide mt-5" data-bs-ride="carousel">
-            <div class="carousel-indicators">
-              <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active"
-                aria-current="true" aria-label="Slide 1"></button>
-              <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1"
-                aria-label="Slide 2"></button>
-              <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2"
-                aria-label="Slide 3"></button>
-              <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="3"
-                aria-label="Slide 4"></button>
-              <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="4"
-                aria-label="Slide 5"></button>
-            </div>
-            <div class="carousel-inner text-justify">
-              <div class="carousel-item active">
-                <p class="d-block w-100" style="height: 230px !important;">Somos especialistas na informatização
-                  completa para o setor de saúde pública municipal. A INFOSUS é a ferramenta essencial para capacitar
-                  municípios a oferecer atendimento de qualidade aos pacientes e proporcionar ao governo insights
-                  valiosos para aprimorar o sistema de saúde em todo o país.</p>
-              </div>
-              <div class="carousel-item">
-                <p class="d-block w-100" id="par-2">Levantamento detalhado do cenário de cada município.
-                  Processo minucioso e abrangente de coleta, análise e documentação de informações relacionadas à saúde
-                  em cada município, envolvendo a investigação de fatores como a disponibilidade de serviços médicos, o
-                  estado de infraestrutura de saúde, as necessidades da população, a prevalência de doenças e outras
-                  variáveis relevantes.</p>
-              </div>
-              <div class="carousel-item">
-                <p class="d-block w-100" style="height: 230px !important;">E-SUS.
-                  Implantação do prontuário eletrônico (e-SUS) - uma solução que se destaca e resolve a deficiência na
-                  geração de relatórios.</p>
-              </div>
-              <div class="carousel-item">
-                <p class="d-block w-100" id="par-4">Oferecemos suporte completo e treinamento personalizado.
-                  Fornecemos assistência abrangente e orientação individualizada aos profissionais de saúde e às equipes
-                  responsáveis pela gestão da saúde nos municípios. Isso pode incluir a disponibilização de recursos,
-                  como tutoriais, documentação técnica e suporte técnico contínuo para garantir que o sistema de gestão
-                  de saúde seja utilizado de forma eficaz. Além disso, o treinamento personalizado assegura que as
-                  necessidades específicas de cada município sejam atendidas, capacitando-os a tirar o máximo proveito
-                  da tecnologia e das ferramentas disponíveis para melhorar os cuidados de saúde locais. Essa abordagem
-                  reforça o compromisso em promover a eficiência e a qualidade da assistência médica em cada região.</p>
-              </div>
-              <div class="carousel-item">
-                <p class="d-block w-100" style="height: 230px !important;">Fornecemos um sistema de gestão abrangente
-                  com diversos módulos integrados.
-                  Com o sistema de gestão que a INFOSUS possui, o município tem a possibilidade de gerir procedimentos,
-                  exames e cirurgias detalhadamente, cuidade de cada paciente e sua respectiva necessidade, organização
-                  e proativade é o que nosso sistema distribui!</p>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div class="col-12 col-md-6 col-lg-6 ps-lg-4 d-flex" style="background-color: #0099FF; margin-top: -1px;">
-          <img class="img-fluid rounded align-self-center" src="assets/img/generic/1.jpg" alt="teste">
-        </div>
-        <div class="p-0 m-0 col-12">
-          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320" style="margin-top: -12px;">
-            <path
-              d="M1920.38 224.705L1813.68 206.416C1706.98 188.829 1493.58 151.197 1280.48 180.801C1067.39 209.351 854.6 305.138 641.327 296.121C428.059 287.806 214.312 176.442 107.438 120.76L0.564891 65.0787L0.304288 8.90236L106.917 8.40778C213.53 7.9132 426.756 6.92404 639.981 5.93489C853.207 4.94573 1066.43 3.95657 1279.66 2.96741C1492.88 1.97825 1706.11 0.989093 1812.72 0.494514L1919.34 -6.57151e-05L1920.38 224.705Z"
-              fill="#0099FF" />
-          </svg>
-        </div>
-      </div>
-
-
-      <div class="container">
-
-        <div class="text-center mt-5" data-aos="fade-down">
-          <h4>ALGUNS DE NOSSOS SERVIÇOS:</h4>
-        </div>
-        <div class="row flex-center mt-3" data-aos="new-animation">
-          <div class="col-md col-lg-5 col-xl-4 ps-lg-6"><img class="img-fluid px-6 px-md-0"
-              src="assets/img/infosus/infosus-icons/1.png" alt="" /></div>
-          <div class="col-md col-lg-5 col-xl-4 mt-4 mt-md-0">
-            <h5 class="text-danger"><span class="fab fa-mixcloud"></span> CLOUD</h5>
-            <h3>SERVIDOR EM NUVEM(CLOUD SERVER):</h3>
-            <p>Garantimos o funcionamento em alta performance durante toda jornada de trabalho da equipe de saúde.</p>
-          </div>
-        </div>
-        <div class="row flex-center mt-7" data-aos="new-animation">
-          <div class="col-md col-lg-5 col-xl-4 pe-lg-6 order-md-2"><img class="img-fluid px-6 px-md-0"
-              src="assets/img/infosus/infosus-icons/2.png" alt="" /></div>
-          <div class="col-md col-lg-5 col-xl-4 mt-4 mt-md-0">
-            <h5 class="text-info"> <span class="far fa-object-ungroup me-2"></span>INSTALAÇÃO</h5>
-            <h3>INSTALAÇÃO, CONFIGURAÇÃO E SUPORTE:</h3>
-            <p>Instalamos e configuramos todo o ambiente de trabalho em nosso servidor, também realizamos treinamento
-              para a sincronização com os tablets dos Agentes de Saúde.</p>
-          </div>
-        </div>
-        <div class="row flex-center mt-7" data-aos="new-animation">
-          <div class="col-md col-lg-5 col-xl-4 ps-lg-6"><img class="img-fluid px-6 px-md-0"
-              src="assets/img/infosus/infosus-icons/3.png" alt="" /></div>
-          <div class="col-md col-lg-5 col-xl-4 mt-4 mt-md-0">
-            <h5 class="text-success"><span class="fab fa-watchman-monitoring me-2"></span>TÉCNINCA</h5>
-            <h3>CAPACITAÇÃO:</h3>
-            <p>Oferecemos capacitação para implantação do PEC presencial e/ou remotamente para todos os profissionais de
-              saúde.</p>
-          </div>
-        </div>
-        <div class="row flex-center mt-7" data-aos="new-animation">
-          <div class="col-md col-lg-5 col-xl-4 ps-lg-6 order-md-2"><img class="img-fluid px-6 px-md-0"
-              src="assets/img/infosus/infosus-icons/4.png" alt="" /></div>
-          <div class="col-md col-lg-5 col-xl-4 mt-4 mt-md-0">
-            <h5 class="text-success"><span class="fas fa-headset me-2"></span>ANTEDIMENTO</h5>
-            <h3>MONITORAMENTO:</h3>
-            <p>Monitoramento contínuo dos indicadores e metas do município conforme normativas emitidas pelo MS,
-              evitando bloqueios, suspensão e redução dos recursos financeiros da Atenção Primária à Saúde.</p>
-          </div>
-        </div>
-        <div class="row flex-center mt-7" data-aos="new-animation">
-          <div class="col-md col-lg-5 col-xl-4 ps-lg-6"><img class="img-fluid px-6 px-md-0"
-              src="assets/img/infosus/infosus-icons/5.png" alt="" /></div>
-          <div class="col-md col-lg-5 col-xl-4 mt-4 mt-md-0">
-            <h5 class="text-success"><span class="fas fa-question-circle me-2"></span>DÚVIDAS</h5>
-            <h3>SUPORTE:</h3>
-            <p>Temos profissionais capacitados para tirar qualquer dúvida sobre a tecnologia implantada, além de
-              garantir seu funcionamento adequado.</p>
-          </div>
-        </div>
-        <div class="row flex-center mt-7" data-aos="new-animation">
-          <div class="col-md col-lg-5 col-xl-4 ps-lg-6 order-md-2"><img class="img-fluid px-6 px-md-0"
-              src="assets/img/infosus/infosus-icons/6.png" alt="" /></div>
-          <div class="col-md col-lg-5 col-xl-4 mt-4 mt-md-0">
-            <h5 class="text-success"><span class="fas fa-wrench me-2"></span>UPDATES</h5>
-            <h3>ATUALIZAÇÃO E BACKUPS:</h3>
-            <p>Garantimos a atualização do sistema em tempo hábil, além de zelar pela segurança das informações,
-              assegurando que todos os dados não se percam.</p>
-          </div>
-        </div>
-        <div class="row flex-center mt-7" data-aos="new-animation">
-          <div class="col-md col-lg-5 col-xl-4 ps-lg-6"><img class="img-fluid px-6 px-md-0"
-              src="assets/img/infosus/infosus-icons/7.png" alt="" /></div>
-          <div class="col-md col-lg-5 col-xl-4 mt-4 mt-md-0">
-            <h5 class="text-success"><span class="fas fa-file-export me-2"></span>EXPORT</h5>
-            <h3>EXPORTAÇÃO:</h3>
-            <p>Seguimos rigorosamente o cronograma de exportação da produção para o Ministério da Saúde, evitanto
-              bloqueios de recursos para a equipe de saúde.</p>
-          </div>
-        </div>
-      </div>
-      <!-- end of .container-->
-
-    </section>
-    <!-- <section> close ============================-->
-    <!-- ============================================-->
-
-
-
-
-    <!-- ============================================-->
-    <!-- <section> begin ============================-->
-    <section class="bg-light text-center" data-aos="fade-up">
-
-      <div class="container">
-        <div class="row">
-          <div class="col">
-            <h1 class="fs-2 fs-sm-4 fs-md-5">Benefícios INFOSUS</h1>
-            <p class="lead">Não há desvantagens ❤️‍🔥</p>
-          </div>
-        </div>
-        <div class="row mt-6">
-          <div class="col-lg-4" data-aos="fade-up">
-            <div class="card card-span h-100">
-              <div class="card-span-img"><span class="far fa-chart-bar fs-4 text-info"></span></div>
-              <div class="card-body pt-6 pb-4">
-                <!-- <h5 class="mb-2">(vantagem 1)</h5> -->
-                <p>Prever o cenário dos indicadores com antecedência para abordar os principais desafios e alcançar as
-                  metas estabelecidas.</p>
-              </div>
-            </div>
-          </div>
-          <div class="col-lg-4 mt-6 mt-lg-0" data-aos="fade-up">
-            <div class="card card-span h-100">
-              <div class="card-span-img"><span class="fas fa-chart-line fs-5 text-success"></span></div>
-              <div class="card-body pt-6 pb-4">
-                <!-- <h5 class="mb-2">(vantagem 2)</h5> -->
-                <p>Assegurar um desempenho consistente de alta performance do sistema ao longo de toda a jornada de
-                  trabalho.</p>
-              </div>
-            </div>
-          </div>
-          <div class="col-lg-4 mt-6 mt-lg-0" data-aos="fade-up">
-            <div class="card card-span h-100">
-              <div class="card-span-img"><span class="fas fa-info fs-4 text-danger"></span></div>
-              <div class="card-body pt-6 pb-4">
-                <!-- <h5 class="mb-2">(vantagem 3)</h5> -->
-                <p>Fornecer suporte à equipe de saúde para esclarecimento de dúvidas, garantindo a precisão no registro
-                  de informações.</p>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-      <!-- end of .container-->
-
-    </section>
-    <!-- <section> close ============================-->
-    <!-- ============================================-->
-
-
-
-
-    <!-- ============================================-->
-    <!-- <section> begin ============================-->
-    <section class="bg-200 text-center" data-aos="fade-down">
-
-      <div class="container">
-        <div class="row justify-content-center">
-          <div class="col-lg-9 col-xl-8">
-            <div class="swiper-container theme-slider"
-              data-swiper='{"autoplay":true,"spaceBetween":5,"loop":true,"loopedSlides":5,"slideToClickedSlide":true}'>
-              <div class="swiper-wrapper">
-                <div class="swiper-slide">
-                  <div class="px-5 px-sm-6">
-                    <p class="fs-sm-1 fs-md-1 fst-italic text-dark">"Através do Sistema Infosus os benefícios para a
-                      Saúde do município de Luislandia foram inúmeros, a equipe conseguiu organizar além dos processos
-                      de trabalho o monitoramento em tempo real de todos os indicadores do Previne Brasil, onde
-                      estávamos com indicadores menor que 30%, após implantação e parceria firmada com o Infosus
-                      saltamos para 100%.
-                      O Infosus surgiu no momento certo pois precisávamos de agilidade nas informações, relatórios
-                      precisos para tomada de decisões e articulações para prestar uma assistência de qualidade e assim
-                      atingir o crescimento almejado atingindo todos os indicadores.
-                      Hoje juntos somos uma parceria de sucesso na saúde do município."</p>
-                    <p class="fs-0 text-600">Thiely ~ Secretária Municipal de Luislandia/MG</p>
-                    <div class="avatar avatar-5xl">
-                      <img class="rounded-circle" src="assets/img/team/15.jpg" alt="" />
-                    </div>
-                  </div>
+    <!-- ===============================================-->
+    <!--    Main Content-->
+    <!-- ===============================================-->
+    <main class="main" id="top">
+        <nav class="navbar navbar-standard navbar-expand-lg fixed-top navbar-glass navbar-light">
+            <div class="container">
+                <a class="navbar-brand" href="index.html">
+                    <img src="assets/img/logos/infosus-logo.png" alt="logo-infosus" style="width: 100px;">
+                </a>
+                <button class="navbar-toggler collapsed" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#navbarStandard" aria-controls="navbarStandard" aria-expanded="false"
+                    aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
+                <div class="collapse navbar-collapse scrollbar" id="navbarStandard">
+                    <ul class="navbar-nav ms-auto">
+                        <li class="nav-item">
+                            <a class="nav-link" href="https://infosus.net.br/resultados" role="button"><i
+                                    class="fas fa-poll-h"></i>
+                                Resultados</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="https://app.infosus.com.br/" target="_blank" role="button"><i
+                                    class="fas fa-user"></i> Login</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link"
+                                href="https://api.whatsapp.com/send?phone=38991251037&text=Ol%C3%A1%21%20Gostaria%20de%20saber%20mais%20sobre%20a%20INFOSUS%21"
+                                target="_blank" role="button"><i class="fas fa-comment"></i> Contato</a>
+                        </li>
+                    </ul>
                 </div>
-                <div class="swiper-slide">
-                  <div class="px-5 px-sm-6">
-                    <p class="fs-sm-1 fs-md-1 fst-italic text-dark">"O infosus teve um papel primordial nas tomadas de
-                      decisões da gestão das equipes de saúde, pois é um sistema que nos permite acompanhar em tempo
-                      real a situação de saúde, através das informações obtidas do Esus com os relatórios dos
-                      indicadores do Programa Previne Brasil. Com isso, conseguimos em vários quadrimestres resultados
-                      excelentes do Programa, além da melhora da eficiência e eficácia dos serviços prestados à nossa
-                      população!"</p>
-                    <p class="fs-0 text-600">Renata ~ Coordenadora da APS de Santo Antônio do Retiro/MG</p>
-                    <div class="avatar avatar-5xl">
-                      <img class="rounded-circle" src="assets/img/team/24.jpg" alt="" />
+            </div>
+        </nav>
+
+        <!-- ============================================-->
+        <!-- <section> begin ============================-->
+        <section class="py-0 overflow-hidden light" id="banner">
+
+            <div class="bg-holder overlay"
+                style="background-image:url(assets/img/infosus/banner-infosusV2.jpg);background-position: top;transform: scaleX(-1);">
+            </div>
+            <!--/.bg-holder-->
+
+            <div class="container">
+                <div class="row flex-center align-items-center pt-8 pt-lg-10 pb-lg-9 pb-xl-0" data-aos="fade-left">
+                    <div
+                        class="col-md-11 col-lg-8 col-xl-4 pb-7 pb-xl-5 text-center text-xl-start d-flex flex-column justify-content-center align-items-center">
+                        <h1 class="text-white fw-light">O melhor sistema de <br><span
+                                class="typed-text fw-bold bg-primary"
+                                data-typed-text='["hospedagem","capacitação","monitoramento","suporte"]'></span><br />para
+                            o seu
+                            munícipio</h1>
+                        <p class="lead text-white fs--1 opacity-75">Informações obtidas de produção durante a
+                            compentência estarão
+                            visíveis de forma intuitiva no nosso painel. Atendemos aos critérios estabelecidos pelo
+                            programa
+                            INFORMATIZA-APS do ministério da Saúde.</p>
+                        <a class="btn btn-outline-light border-2 rounded-pill btn-lg mt-4 fs-0 py-2"
+                            href="https://api.whatsapp.com/send?phone=38991251037&text=Ol%C3%A1%21%20Gostaria%20de%20saber%20mais%20sobre%20a%20INFOSUS%21"
+                            target="_blank">Comece com a
+                            INFOSUS<span class="fas fa-play ms-2" data-fa-transform="shrink-6 down-1"></span></a>
                     </div>
-                  </div>
-                </div>
-                <div class="swiper-slide">
-                  <div class="px-5 px-sm-6">
-                    <p class="fs-sm-1 fs-md-1 fst-italic text-dark">"O Infosus é um sistema fundamental e importante
-                      para tomada de decisões em nossas Unidades de Saúde, ele facilita os dados, armazena e transmite
-                      informações necessárias para acompanhar os pacientes, ajuda os profissionais a realizar um
-                      processo de planejamento contínuo e organizado. Além de fortalecer a gestão de saúde do nosso
-                      município, possibilitando uma gestão mais transparente, organizada e justa garantindo a equidade
-                      através da tecnologia onde foi possível traçar as demandas da Central de marcação de consultas e
-                      exames e proceder com os agendamentos de forma igualitária para todas as equipes preservando e
-                      valorizando os princípios do Sistema Único de Saúde, Universalidade, Integralidade e Equidade."
-                    </p>
-                    <p class="fs-0 text-600">Herlaine ~ Coordenadora da APS de Mato Verde/MG</p>
-                    <div class="avatar avatar-5xl">
-                      <img class="rounded-circle" src="assets/img/team/25.jpg" alt="" />
+                    <div class="col-xl-7 offset-xl-1 align-self-center mt-xl-0 d-flex">
+                        <video controls autoplay muted loop class="w-100 p-2 mb-5 bg-primary rounded align-self-center"
+                            id="video-infosus">
+                            <source src="assets/video/SnapInsta.io-Sistema de Monitoramento - InfoSUS-(480p).mp4"
+                                type="video/mp4">
+                        </video>
                     </div>
-                  </div>
                 </div>
-              </div>
-              <div class="swiper-nav">
-                <div class="swiper-button-next swiper-button-white"></div>
-                <div class="swiper-button-prev swiper-button-white"> </div>
-              </div>
             </div>
-          </div>
-        </div>
-      </div>
-      <!-- end of .container-->
+            <!-- end of .container-->
 
-    </section>
-    <!-- <section> close ============================-->
-    <!-- ============================================-->
+        </section>
+        <!-- <section> close ============================-->
+        <!-- ============================================-->
 
 
 
 
-    <!-- ============================================-->
-    <!-- <section> begin ============================-->
-    <section class="light py-0" data-aos="zoom-in">
+        <!-- ============================================-->
+        <!-- <section> begin ============================-->
+        <section class="py-3 bg-light shadow-sm  rounded-end-circle" data-aos="zoom-in">
 
-      <div class="bg-holder overlay" id="overlay-blue"
-        style="background-image:url(https://consultvida.com.br/saopaulo/images/amil-topo.jpg);">
-      </div>
-      <!--/.bg-holder-->
-
-      <div class="container-fluid py-3">
-        <h3 class="text-center text-light">SISTEMA ÚNICO</h3>
-        <div class="row text-center text-light">
-          <div class="col-lg-4 d-flex flex-column align-items-center">
-            <div class="rounded-circle border border-5 border-white d-flex justify-content-center align-items-center"
-              style="height: 180px; width: 180px;">
-              <p class="fs-6 m-0 p-0"><span data-countup='{"endValue":40, "enableScrollSpy":true}'>0</span>+</p>
+            <div class="container">
+                <div class="text-center mb-3">
+                    <h4>Alguns clientes INFOSUS</h4>
+                </div>
+                <div class="row">
+                    <div class="col-lg-12 mb-4 mb-lg-0">
+                        <div class="swiper-container theme-slider text-center w-100"
+                            data-swiper='{"autoplay": {"delay": 300},"spaceBetween":3,"loop":true,"loopedSlides":5,"slideToClickedSlide":true, "slidesPerView": 5, "speed": 1500, "easing": "swing"}'>
+                            <div class="swiper-wrapper">
+                                <div class="swiper-slide"><img class="rounded-1 img-fluid"
+                                        src="assets/img/infosus/logomarcas/botumirim.png" alt=""
+                                        style="height: 50px;" /></div>
+                                <div class="swiper-slide"><img class="rounded-1 img-fluid"
+                                        src="assets/img/infosus/logomarcas/catuti.png" alt="" style="height: 50px;" />
+                                </div>
+                                <div class="swiper-slide"><img class="rounded-1 img-fluid"
+                                        src="assets/img/infosus/logomarcas/cristalia.png" alt=""
+                                        style="height: 50px;" /></div>
+                                <div class="swiper-slide"><img class="rounded-1 img-fluid"
+                                        src="assets/img/infosus/logomarcas/cupira.png" alt="" style="height: 50px;" />
+                                </div>
+                                <div class="swiper-slide"><img class="rounded-1 img-fluid"
+                                        src="assets/img/infosus/logomarcas/divisaalegre.png" alt=""
+                                        style="height: 50px;" /></div>
+                                <div class="swiper-slide"><img class="rounded-1 img-fluid"
+                                        src="assets/img/infosus/logomarcas/frutadeleite.png" alt=""
+                                        style="height: 50px;" /></div>
+                                <div class="swiper-slide"><img class="rounded-1 img-fluid"
+                                        src="assets/img/infosus/logomarcas/gameleiras.png" alt=""
+                                        style="height: 50px;" /></div>
+                                <div class="swiper-slide"><img class="rounded-1 img-fluid"
+                                        src="assets/img/infosus/logomarcas/graomogol.png" alt=""
+                                        style="height: 50px;" /></div>
+                                <div class="swiper-slide"><img class="rounded-1 img-fluid"
+                                        src="assets/img/infosus/logomarcas/janauba.png" alt="" style="height: 50px;" />
+                                </div>
+                                <div class="swiper-slide"><img class="rounded-1 img-fluid"
+                                        src="assets/img/infosus/logomarcas/juvenilia.png" alt=""
+                                        style="height: 50px;" /></div>
+                                <div class="swiper-slide"><img class="rounded-1 img-fluid"
+                                        src="assets/img/infosus/logomarcas/mamonas.png" alt="" style="height: 50px;" />
+                                </div>
+                                <div class="swiper-slide"><img class="rounded-1 img-fluid"
+                                        src="assets/img/infosus/logomarcas/matias.png" alt="" style="height: 50px;" />
+                                </div>
+                                <div class="swiper-slide"><img class="rounded-1 img-fluid"
+                                        src="assets/img/infosus/logomarcas/matoverde.png" alt=""
+                                        style="height: 50px;" /></div>
+                                <div class="swiper-slide"><img class="rounded-1 img-fluid"
+                                        src="assets/img/infosus/logomarcas/mazul.png" alt="" style="height: 50px;" />
+                                </div>
+                                <div class="swiper-slide"><img class="rounded-1 img-fluid"
+                                        src="assets/img/infosus/logomarcas/miravania.png" alt=""
+                                        style="height: 50px;" /></div>
+                                <div class="swiper-slide"><img class="rounded-1 img-fluid"
+                                        src="assets/img/infosus/logomarcas/montalvania.png" alt=""
+                                        style="height: 50px;" /></div>
+                                <div class="swiper-slide"><img class="rounded-1 img-fluid"
+                                        src="assets/img/infosus/logomarcas/montezuma.png" alt=""
+                                        style="height: 50px;" /></div>
+                                <div class="swiper-slide"><img class="rounded-1 img-fluid"
+                                        src="assets/img/infosus/logomarcas/pimenta.png" alt="" style="height: 50px;" />
+                                </div>
+                                <div class="swiper-slide"><img class="rounded-1 img-fluid"
+                                        src="assets/img/infosus/logomarcas/porteirinha.png" alt=""
+                                        style="height: 50px;" /></div>
+                                <div class="swiper-slide"><img class="rounded-1 img-fluid"
+                                        src="assets/img/infosus/logomarcas/saojoaoparaiso.png" alt=""
+                                        style="height: 50px;" /></div>
+                                <div class="swiper-slide"><img class="rounded-1 img-fluid"
+                                        src="assets/img/infosus/logomarcas/rsz_bandeirasaojoaodasmissoes-nobg.png"
+                                        alt="" style="height: 50px;" /></div>
+                                <div class="swiper-slide"><img class="rounded-1 img-fluid"
+                                        src="assets/img/infosus/logomarcas/sjparaiso.svg" alt=""
+                                        style="height: 50px;" /></div>
+                                <div class="swiper-slide"><img class="rounded-1 img-fluid"
+                                        src="assets/img/infosus/logomarcas/ubai.png" alt="" style="height: 50px;" />
+                                </div>
+                                <div class="swiper-slide"><img class="rounded-1 img-fluid"
+                                        src="assets/img/infosus/verdelandia.png" alt="" style="height: 50px;" /></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </div>
-            <p>Municípios já tem nossos serviços</p>
-          </div>
-          <div class="col-lg-4 d-flex flex-column align-items-center">
-            <div class="rounded-circle border border-5 border-white d-flex justify-content-center align-items-center"
-              style="height: 180px; width: 180px;">
-              <p class="fs-6 m-0 p-0"><span data-countup='{"endValue":999,"enableScrollSpy":true}'>0</span>+</p>
+            <!-- end of .container-->
+
+        </section>
+        <!-- <section> close ============================-->
+        <!-- ============================================-->
+
+
+
+
+        <!-- ============================================-->
+        <!-- <section> begin ============================-->
+        <section>
+
+            <div class="d-flex row " data-aos="fade-up" data-aos-duration="1100">
+
+                <div class="col-12 p-0" style="margin-bottom: -1px;">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1920 222" fill="none">
+                        <path d="M0.0240479 50.984L106.688 65.2498C213.352 78.9822 426.68 108.314 640.008 86.5818C853.336 65.6497 1066.66 -6.34576 1279.99 1.25377C1493.32 8.31999 1706.65 93.648 1813.31 136.312L1919.98 178.976V221.64H1813.31C1706.65 221.64 1493.32 221.64 1279.99 221.64C1066.66 221.64 853.336 221.64 640.008 221.64C426.68 221.64 213.352 221.64 106.688 221.64H0.0240479V50.984Z" fill="#0099FF"/>
+                    </svg>
+                </div>
+
+                <div class="p-0 py-1 d-flex align-items-center justify-content-center flex-wrap" style="background-color: #0099FF;" >
+
+                    <div class="carousel slide col-12 col-lg-8 d-flex flex-column" id="carouselExampleIndicators"  data-bs-ride="carousel">
+
+                        <h1 class="text-center my-4">O futuro é a INFOSUS!</h1>
+
+                        <div class="carousel-indicators">
+                            <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0"
+                                class="active" aria-current="true" aria-label="Slide 1"></button>
+                            <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1"
+                                aria-label="Slide 2"></button>
+                            <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2"
+                                aria-label="Slide 3"></button>
+                            <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="3"
+                                aria-label="Slide 4"></button>
+                            <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="4"
+                                aria-label="Slide 5"></button>
+                        </div>
+
+                        <div class="carousel-inner  mb-5">
+                            <div class="carousel-item active">
+                                <p class="">Somos especialistas na informatização
+                                    completa para o setor de saúde pública municipal. A INFOSUS é a ferramenta essencial
+                                    para capacitar
+                                    municípios a oferecer atendimento de qualidade aos pacientes e proporcionar ao
+                                    governo insights
+                                    valiosos para aprimorar o sistema de saúde em todo o país.</p>
+                            </div>
+                            <div class="carousel-item">
+                                <p class="">Levantamento detalhado do cenário de cada município.
+                                    Processo minucioso e abrangente de coleta, análise e documentação de informações
+                                    relacionadas à saúde
+                                    em cada município, envolvendo a investigação de fatores como a disponibilidade de
+                                    serviços médicos, o
+                                    estado de infraestrutura de saúde, as necessidades da população, a prevalência de
+                                    doenças e outras
+                                    variáveis relevantes.</p>
+                            </div>
+                            <div class="carousel-item">
+                                <p class="">E-SUS.
+                                    Implantação do prontuário eletrônico (e-SUS) - uma solução que se destaca e resolve
+                                    a deficiência na
+                                    geração de relatórios.</p>
+                            </div>
+                            <div class="carousel-item">
+                                <p class="">Oferecemos suporte completo e treinamento personalizado.
+                                    Fornecemos assistência abrangente e orientação individualizada aos profissionais de
+                                    saúde e às equipes
+                                    responsáveis pela gestão da saúde nos municípios. Isso pode incluir a
+                                    disponibilização de recursos,
+                                    como tutoriais, documentação técnica e suporte técnico contínuo para garantir que o
+                                    sistema de gestão
+                                    de saúde seja utilizado de forma eficaz. Além disso, o treinamento personalizado
+                                    assegura que as
+                                    necessidades específicas de cada município sejam atendidas, capacitando-os a tirar o
+                                    máximo proveito
+                                    da tecnologia e das ferramentas disponíveis para melhorar os cuidados de saúde
+                                    locais. Essa abordagem
+                                    reforça o compromisso em promover a eficiência e a qualidade da assistência médica
+                                    em cada região.</p>
+                            </div>
+                            <div class="carousel-item">
+                                <p class="">Fornecemos um sistema de gestão abrangente
+                                    com diversos módulos integrados.
+                                    Com o sistema de gestão que a INFOSUS possui, o município tem a possibilidade de
+                                    gerir procedimentos,
+                                    exames e cirurgias detalhadamente, cuidade de cada paciente e sua respectiva
+                                    necessidade, organização
+                                    e proativade é o que nosso sistema distribui!</p>
+                            </div>
+                        </div>
+
+                    </div>
+
+                    
+                    <div class="col-12 col-xl-4 " >
+                        <img class="img-fluid" src="assets/img/generic/1.jpg" alt="teste">
+                    </div>
+
+                </div>
+
+
+
+                <div class="col-12 p-0" style="margin-top: -1px;">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1920 221" fill="none">
+                        <path d="M1919.98 170.656L1813.31 156.39C1706.65 142.658 1493.32 113.326 1279.99 135.058C1066.66 155.99 853.336 227.986 640.008 220.386C426.68 213.32 213.352 127.992 106.688 85.3281L0.0239868 42.6641V0.000137329H106.688C213.352 0.000137329 426.68 0.000137329 640.008 0.000137329C853.336 0.000137329 1066.66 0.000137329 1279.99 0.000137329C1493.32 0.000137329 1706.65 0.000137329 1813.31 0.000137329H1919.98V170.656Z" fill="#0099FF"/>
+                    </svg>
+                </div>
+
             </div>
-            <p>INFOSUS</p>
-          </div>
-          <div class="col-lg-4 d-flex flex-column align-items-center">
-            <div class="rounded-circle border border-5 border-white d-flex justify-content-center align-items-center"
-              style="height: 180px; width: 180px;">
-              <p class="fs-6 m-0 p-0"><span data-countup='{"endValue":999,"enableScrollSpy":true}'>0</span>+</p>
+
+
+            <div class="container">
+
+                <div class="text-center mt-5" data-aos="fade-down">
+                    <h4>ALGUNS DE NOSSOS SERVIÇOS:</h4>
+                </div>
+                <div class="row flex-center mt-3" data-aos="new-animation">
+                    <div class="col-md col-lg-5 col-xl-4 ps-lg-6"><img class="img-fluid px-6 px-md-0"
+                            src="assets/img/infosus/infosus-icons/1.png" alt="" /></div>
+                    <div class="col-md col-lg-5 col-xl-4 mt-4 mt-md-0">
+                        <h5 class="text-danger"><span class="fab fa-mixcloud"></span> CLOUD</h5>
+                        <h3>SERVIDOR EM NUVEM(CLOUD SERVER):</h3>
+                        <p>Garantimos o funcionamento em alta performance durante toda jornada de trabalho da equipe de
+                            saúde.</p>
+                    </div>
+                </div>
+                <div class="row flex-center mt-7" data-aos="new-animation">
+                    <div class="col-md col-lg-5 col-xl-4 pe-lg-6 order-md-2"><img class="img-fluid px-6 px-md-0"
+                            src="assets/img/infosus/infosus-icons/2.png" alt="" /></div>
+                    <div class="col-md col-lg-5 col-xl-4 mt-4 mt-md-0">
+                        <h5 class="text-info"> <span class="far fa-object-ungroup me-2"></span>INSTALAÇÃO</h5>
+                        <h3>INSTALAÇÃO, CONFIGURAÇÃO E SUPORTE:</h3>
+                        <p>Instalamos e configuramos todo o ambiente de trabalho em nosso servidor, também realizamos
+                            treinamento
+                            para a sincronização com os tablets dos Agentes de Saúde.</p>
+                    </div>
+                </div>
+                <div class="row flex-center mt-7" data-aos="new-animation">
+                    <div class="col-md col-lg-5 col-xl-4 ps-lg-6"><img class="img-fluid px-6 px-md-0"
+                            src="assets/img/infosus/infosus-icons/3.png" alt="" /></div>
+                    <div class="col-md col-lg-5 col-xl-4 mt-4 mt-md-0">
+                        <h5 class="text-success"><span class="fab fa-watchman-monitoring me-2"></span>TÉCNINCA</h5>
+                        <h3>CAPACITAÇÃO:</h3>
+                        <p>Oferecemos capacitação para implantação do PEC presencial e/ou remotamente para todos os
+                            profissionais de
+                            saúde.</p>
+                    </div>
+                </div>
+                <div class="row flex-center mt-7" data-aos="new-animation">
+                    <div class="col-md col-lg-5 col-xl-4 ps-lg-6 order-md-2"><img class="img-fluid px-6 px-md-0"
+                            src="assets/img/infosus/infosus-icons/4.png" alt="" /></div>
+                    <div class="col-md col-lg-5 col-xl-4 mt-4 mt-md-0">
+                        <h5 class="text-success"><span class="fas fa-headset me-2"></span>ANTEDIMENTO</h5>
+                        <h3>MONITORAMENTO:</h3>
+                        <p>Monitoramento contínuo dos indicadores e metas do município conforme normativas emitidas pelo
+                            MS,
+                            evitando bloqueios, suspensão e redução dos recursos financeiros da Atenção Primária à
+                            Saúde.</p>
+                    </div>
+                </div>
+                <div class="row flex-center mt-7" data-aos="new-animation">
+                    <div class="col-md col-lg-5 col-xl-4 ps-lg-6"><img class="img-fluid px-6 px-md-0"
+                            src="assets/img/infosus/infosus-icons/5.png" alt="" /></div>
+                    <div class="col-md col-lg-5 col-xl-4 mt-4 mt-md-0">
+                        <h5 class="text-success"><span class="fas fa-question-circle me-2"></span>DÚVIDAS</h5>
+                        <h3>SUPORTE:</h3>
+                        <p>Temos profissionais capacitados para tirar qualquer dúvida sobre a tecnologia implantada,
+                            além de
+                            garantir seu funcionamento adequado.</p>
+                    </div>
+                </div>
+                <div class="row flex-center mt-7" data-aos="new-animation">
+                    <div class="col-md col-lg-5 col-xl-4 ps-lg-6 order-md-2"><img class="img-fluid px-6 px-md-0"
+                            src="assets/img/infosus/infosus-icons/6.png" alt="" /></div>
+                    <div class="col-md col-lg-5 col-xl-4 mt-4 mt-md-0">
+                        <h5 class="text-success"><span class="fas fa-wrench me-2"></span>UPDATES</h5>
+                        <h3>ATUALIZAÇÃO E BACKUPS:</h3>
+                        <p>Garantimos a atualização do sistema em tempo hábil, além de zelar pela segurança das
+                            informações,
+                            assegurando que todos os dados não se percam.</p>
+                    </div>
+                </div>
+                <div class="row flex-center mt-7" data-aos="new-animation">
+                    <div class="col-md col-lg-5 col-xl-4 ps-lg-6"><img class="img-fluid px-6 px-md-0"
+                            src="assets/img/infosus/infosus-icons/7.png" alt="" /></div>
+                    <div class="col-md col-lg-5 col-xl-4 mt-4 mt-md-0">
+                        <h5 class="text-success"><span class="fas fa-file-export me-2"></span>EXPORT</h5>
+                        <h3>EXPORTAÇÃO:</h3>
+                        <p>Seguimos rigorosamente o cronograma de exportação da produção para o Ministério da Saúde,
+                            evitanto
+                            bloqueios de recursos para a equipe de saúde.</p>
+                    </div>
+                </div>
             </div>
-            <p>INFOSUS</p>
-          </div>
-          <div>
-            <a class="btn btn-outline-light rounded-pill me-1 mb-1 btn-sm w-25" type="button"
-              href="https://api.whatsapp.com/send?phone=38991251037&text=Ol%C3%A1%21%20Gostaria%20de%20saber%20mais%20sobre%20a%20INFOSUS%21"
-              target="_blank">Comece agora</a>
-          </div>
-        </div>
-      </div>
-      <!-- end of .container-->
+            <!-- end of .container-->
 
-    </section>
-    <!-- <section> close ============================-->
-    <!-- ============================================-->
+        </section>
+        <!-- <section> close ============================-->
+        <!-- ============================================-->
 
 
 
 
-    <!-- ============================================-->
-    <!-- <section> begin ============================-->
-    <section class="m-0 p-0">
+        <!-- ============================================-->
+        <!-- <section> begin ============================-->
+        <section class="bg-light text-center" data-aos="fade-up">
 
-      <div class="text-dark bg-dark p-3">
-        <div class="container">
-          <div class="row justify-content-between fs--1">
-            <div class="col-12 col-sm-auto text-center">
-              <p class="mb-0 text-600 opacity-85">Obrigado por escolher a INFOSUS <span
-                  class="d-none d-sm-inline-block">| </span><br class="d-sm-none" /> 2023 &copy; <a
-                  class="text-white opacity-85" href="#Soluta">Soluta</a></p>
+            <div class="container">
+                <div class="row">
+                    <div class="col">
+                        <h1 class="fs-2 fs-sm-4 fs-md-5">Benefícios INFOSUS</h1>
+                        <p class="lead">Não há desvantagens ❤️‍🔥</p>
+                    </div>
+                </div>
+                <div class="row mt-6">
+                    <div class="col-lg-4" data-aos="fade-up">
+                        <div class="card card-span h-100">
+                            <div class="card-span-img"><span class="far fa-chart-bar fs-4 text-info"></span></div>
+                            <div class="card-body pt-6 pb-4">
+                                <!-- <h5 class="mb-2">(vantagem 1)</h5> -->
+                                <p>Prever o cenário dos indicadores com antecedência para abordar os principais desafios
+                                    e alcançar as
+                                    metas estabelecidas.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 mt-6 mt-lg-0" data-aos="fade-up">
+                        <div class="card card-span h-100">
+                            <div class="card-span-img"><span class="fas fa-chart-line fs-5 text-success"></span></div>
+                            <div class="card-body pt-6 pb-4">
+                                <!-- <h5 class="mb-2">(vantagem 2)</h5> -->
+                                <p>Assegurar um desempenho consistente de alta performance do sistema ao longo de toda a
+                                    jornada de
+                                    trabalho.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 mt-6 mt-lg-0" data-aos="fade-up">
+                        <div class="card card-span h-100">
+                            <div class="card-span-img"><span class="fas fa-info fs-4 text-danger"></span></div>
+                            <div class="card-body pt-6 pb-4">
+                                <!-- <h5 class="mb-2">(vantagem 3)</h5> -->
+                                <p>Fornecer suporte à equipe de saúde para esclarecimento de dúvidas, garantindo a
+                                    precisão no registro
+                                    de informações.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </div>
-            <div class="col-12 col-sm-auto text-center">
-              <p class="mb-0 text-600 opacity-85">v2.0.0</p>
+            <!-- end of .container-->
+
+        </section>
+        <!-- <section> close ============================-->
+        <!-- ============================================-->
+
+
+
+
+        <!-- ============================================-->
+        <!-- <section> begin ============================-->
+        <section class="bg-200 text-center" data-aos="fade-down">
+
+            <div class="container">
+                <div class="row justify-content-center">
+                    <div class="col-lg-9 col-xl-8">
+                        <div class="swiper-container theme-slider"
+                            data-swiper='{"autoplay":true,"spaceBetween":5,"loop":true,"loopedSlides":5,"slideToClickedSlide":true}'>
+                            <div class="swiper-wrapper">
+                                <div class="swiper-slide">
+                                    <div class="px-5 px-sm-6">
+                                        <p class="fs-sm-1 fs-md-1 fst-italic text-dark">"Através do Sistema Infosus os
+                                            benefícios para a
+                                            Saúde do município de Luislandia foram inúmeros, a equipe conseguiu
+                                            organizar além dos processos
+                                            de trabalho o monitoramento em tempo real de todos os indicadores do Previne
+                                            Brasil, onde
+                                            estávamos com indicadores menor que 30%, após implantação e parceria firmada
+                                            com o Infosus
+                                            saltamos para 100%.
+                                            O Infosus surgiu no momento certo pois precisávamos de agilidade nas
+                                            informações, relatórios
+                                            precisos para tomada de decisões e articulações para prestar uma assistência
+                                            de qualidade e assim
+                                            atingir o crescimento almejado atingindo todos os indicadores.
+                                            Hoje juntos somos uma parceria de sucesso na saúde do município."</p>
+                                        <p class="fs-0 text-600">Thiely ~ Secretária Municipal de Luislandia/MG</p>
+                                        <div class="avatar avatar-5xl">
+                                            <img class="rounded-circle" src="assets/img/team/15.jpg" alt="" />
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="swiper-slide">
+                                    <div class="px-5 px-sm-6">
+                                        <p class="fs-sm-1 fs-md-1 fst-italic text-dark">"O infosus teve um papel
+                                            primordial nas tomadas de
+                                            decisões da gestão das equipes de saúde, pois é um sistema que nos permite
+                                            acompanhar em tempo
+                                            real a situação de saúde, através das informações obtidas do Esus com os
+                                            relatórios dos
+                                            indicadores do Programa Previne Brasil. Com isso, conseguimos em vários
+                                            quadrimestres resultados
+                                            excelentes do Programa, além da melhora da eficiência e eficácia dos
+                                            serviços prestados à nossa
+                                            população!"</p>
+                                        <p class="fs-0 text-600">Renata ~ Coordenadora da APS de Santo Antônio do
+                                            Retiro/MG</p>
+                                        <div class="avatar avatar-5xl">
+                                            <img class="rounded-circle" src="assets/img/team/24.jpg" alt="" />
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="swiper-slide">
+                                    <div class="px-5 px-sm-6">
+                                        <p class="fs-sm-1 fs-md-1 fst-italic text-dark">"O Infosus é um sistema
+                                            fundamental e importante
+                                            para tomada de decisões em nossas Unidades de Saúde, ele facilita os dados,
+                                            armazena e transmite
+                                            informações necessárias para acompanhar os pacientes, ajuda os profissionais
+                                            a realizar um
+                                            processo de planejamento contínuo e organizado. Além de fortalecer a gestão
+                                            de saúde do nosso
+                                            município, possibilitando uma gestão mais transparente, organizada e justa
+                                            garantindo a equidade
+                                            através da tecnologia onde foi possível traçar as demandas da Central de
+                                            marcação de consultas e
+                                            exames e proceder com os agendamentos de forma igualitária para todas as
+                                            equipes preservando e
+                                            valorizando os princípios do Sistema Único de Saúde, Universalidade,
+                                            Integralidade e Equidade."
+                                        </p>
+                                        <p class="fs-0 text-600">Herlaine ~ Coordenadora da APS de Mato Verde/MG</p>
+                                        <div class="avatar avatar-5xl">
+                                            <img class="rounded-circle" src="assets/img/team/25.jpg" alt="" />
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="swiper-nav">
+                                <div class="swiper-button-next swiper-button-white"></div>
+                                <div class="swiper-button-prev swiper-button-white"> </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </div>
-          </div>
-        </div>
-      </div>
-      <!-- end of .container-->
+            <!-- end of .container-->
 
-    </section>
-    <!-- <section> close ============================-->
-    <!-- ============================================-->
+        </section>
+        <!-- <section> close ============================-->
+        <!-- ============================================-->
 
 
-  </main>
-  <!-- ===============================================-->
-  <!--    End of Main Content-->
-  <!-- ===============================================-->
 
 
-  <!-- ===============================================-->
-  <!--    JavaScripts-->
-  <!-- ===============================================-->
-  <script src="vendors/popper/popper.min.js"></script>
-  <script src="vendors/bootstrap/bootstrap.min.js"></script>
-  <script src="vendors/anchorjs/anchor.min.js"></script>
-  <script src="vendors/is/is.min.js"></script>
-  <script src="vendors/swiper/swiper-bundle.min.js"></script>
-  <script src="vendors/typed.js/typed.js"></script>
-  <script src="vendors/fontawesome/all.min.js"></script>
-  <script src="vendors/lodash/lodash.min.js"></script>
-  <script src="https://polyfill.io/v3/polyfill.min.js?features=window.scroll"></script>
-  <script src="vendors/list.js/list.min.js"></script>
-  <script src="assets/js/theme.js"></script>
-  <script src="vendors/countup/countUp.umd.js"></script>
-  <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+        <!-- ============================================-->
+        <!-- <section> begin ============================-->
+        <section class="light py-0" data-aos="zoom-in">
+
+            <div class="bg-holder overlay" id="overlay-blue"
+                style="background-image:url(https://consultvida.com.br/saopaulo/images/amil-topo.jpg);">
+            </div>
+            <!--/.bg-holder-->
+
+            <div class="container-fluid py-3">
+                <h3 class="text-center text-light">SISTEMA ÚNICO</h3>
+                <div class="row text-center text-light">
+                    <div class="col-lg-4 d-flex flex-column align-items-center">
+                        <div class="rounded-circle border border-5 border-white d-flex justify-content-center align-items-center"
+                            style="height: 180px; width: 180px;">
+                            <p class="fs-6 m-0 p-0"><span
+                                    data-countup='{"endValue":40, "enableScrollSpy":true}'>0</span>+</p>
+                        </div>
+                        <p>Municípios já tem nossos serviços</p>
+                    </div>
+                    <div class="col-lg-4 d-flex flex-column align-items-center">
+                        <div class="rounded-circle border border-5 border-white d-flex justify-content-center align-items-center"
+                            style="height: 180px; width: 180px;">
+                            <p class="fs-6 m-0 p-0"><span
+                                    data-countup='{"endValue":999,"enableScrollSpy":true}'>0</span>+</p>
+                        </div>
+                        <p>INFOSUS</p>
+                    </div>
+                    <div class="col-lg-4 d-flex flex-column align-items-center">
+                        <div class="rounded-circle border border-5 border-white d-flex justify-content-center align-items-center"
+                            style="height: 180px; width: 180px;">
+                            <p class="fs-6 m-0 p-0"><span
+                                    data-countup='{"endValue":999,"enableScrollSpy":true}'>0</span>+</p>
+                        </div>
+                        <p>INFOSUS</p>
+                    </div>
+                    <div>
+                        <a class="btn btn-outline-light rounded-pill me-1 mb-1 btn-sm w-25" type="button"
+                            href="https://api.whatsapp.com/send?phone=38991251037&text=Ol%C3%A1%21%20Gostaria%20de%20saber%20mais%20sobre%20a%20INFOSUS%21"
+                            target="_blank">Comece agora</a>
+                    </div>
+                </div>
+            </div>
+            <!-- end of .container-->
+
+        </section>
+        <!-- <section> close ============================-->
+        <!-- ============================================-->
+
+
+
+
+        <!-- ============================================-->
+        <!-- <section> begin ============================-->
+        <section class="m-0 p-0">
+
+            <div class="text-dark bg-dark p-3">
+                <div class="container">
+                    <div class="row justify-content-between fs--1">
+                        <div class="col-12 col-sm-auto text-center">
+                            <p class="mb-0 text-600 opacity-85">Obrigado por escolher a INFOSUS <span
+                                    class="d-none d-sm-inline-block">| </span><br class="d-sm-none" /> 2023 &copy; <a
+                                    class="text-white opacity-85" href="#Soluta">Soluta</a></p>
+                        </div>
+                        <div class="col-12 col-sm-auto text-center">
+                            <p class="mb-0 text-600 opacity-85">v2.0.0</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- end of .container-->
+
+        </section>
+        <!-- <section> close ============================-->
+        <!-- ============================================-->
+
+
+    </main>
+    <!-- ===============================================-->
+    <!--    End of Main Content-->
+    <!-- ===============================================-->
+
+
+    <!-- ===============================================-->
+    <!--    JavaScripts-->
+    <!-- ===============================================-->
+    <script src="vendors/popper/popper.min.js"></script>
+    <script src="vendors/bootstrap/bootstrap.min.js"></script>
+    <script src="vendors/anchorjs/anchor.min.js"></script>
+    <script src="vendors/is/is.min.js"></script>
+    <script src="vendors/swiper/swiper-bundle.min.js"></script>
+    <script src="vendors/typed.js/typed.js"></script>
+    <script src="vendors/fontawesome/all.min.js"></script>
+    <script src="vendors/lodash/lodash.min.js"></script>
+    <script src="https://polyfill.io/v3/polyfill.min.js?features=window.scroll"></script>
+    <script src="vendors/list.js/list.min.js"></script>
+    <script src="assets/js/theme.js"></script>
+    <script src="vendors/countup/countUp.umd.js"></script>
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
 </body>
 
 </html>
