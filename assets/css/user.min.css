@@ -1,9 +1,4 @@
 /*# sourceMappingURL=user.min.css.map */
-.custom-button {
-    background-color: rgba(255, 255, 255, 0) !important;
-    color: black !important;
-}
-
 #overlay-blue.overlay::before {
     content: "" !important;
     position: absolute !important;
